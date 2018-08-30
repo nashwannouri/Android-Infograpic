@@ -1,0 +1,18 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_Screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#ecf0f1"
+    android:contextClickable="false">
+
+    <TextView
+        android:id="@+id/small_ScreenTXT"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="\nThis is made for tablets only, please uninstall"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+</android.support.v4.widget.DrawerLayout>

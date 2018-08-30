@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/title_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="About"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="In this infographic, we will describe why students should consider working in the IT Service sector"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/title_about"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="All data retrieved from the World Data Bank"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/info_text"
+        android:gravity="center_horizontal"/>
+
+
+</RelativeLayout>

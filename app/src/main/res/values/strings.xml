@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Infographic</string>
+    <string name="title"> Why you should work in the IT service sector</string>
+    <string name="seekbar_info">You can change year by dragging the bar! </string>
+    <string name= "ukfuture">Forecasted values for employment in each sector up to 2022</string>
+    <string name="pieDesc"></string>
+    <string name="lineDescrip">An overview of employment in each sector(%) in the UK from 1992 to 2012.</string>
+    <string name="futureBtn">Future Predication</string>
+    <string name="emplymentLineGraphDescription"> Employment In Different Sectors (% of total employment)</string>
+    <string name="gdp">Monetary Value</string>
+    <string name="fa_about">&#xf06a;</string>
+    <string name="fa_play">&#xf144;</string>
+    <string name="leftPanelDescr">Data has been extrapolated using the average percentage change values for the years 1992-2012</string>
+    <string name="cubicinfo">ICT has contributed towards the UK\'s service exports. Rising over 15% in less than 10 years. In 2014, UK ICT service exports alone were worth over $120 BILLION.
+                    </string>
+    <string name="backBtn">&#xf0a8;</string>
+
+    <string name="rightSideTitle">Monetary value of ICT service exports (US$) in the UK</string>
+
+</resources>

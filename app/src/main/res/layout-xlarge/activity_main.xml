@@ -1,0 +1,399 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#ecf0f1"
+    android:contextClickable="false">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+    <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/repeatbg" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+           >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:id="@+id/title"
+                android:paddingLeft="15dp"
+                android:background="#111111"
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:background="@color/black"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/play"
+                    android:textSize="34sp"
+                    android:text="@string/fa_play"
+                    android:background="@color/black"
+                    android:textColor="@color/yellow"
+                    android:onClick="autoScroll"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/about"
+                    android:textSize="34sp"
+                    android:text="@string/fa_about"
+                    android:background="@color/black"
+                    android:textColor="@color/yellow"
+                    android:onClick="displayAboutDiag"
+                    android:gravity="center"
+
+
+
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/horizontalScroll">
+
+        <LinearLayout
+            android:layout_width="3110dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="3110dp"
+                android:layout_height="512dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="450dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="top"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="140dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/tractor"
+                            android:layout_marginLeft="25dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/transport"
+                            android:layout_marginLeft="25dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/industry"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="110dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+
+                        >
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="2% more than last year."
+                            android:id="@+id/button0"
+                            android:background="@color/yellow"
+                            android:clickable="false"
+                            android:nestedScrollingEnabled="true" />
+
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="  -5% less than previous year."
+                            android:id="@+id/button1"
+                            android:background="@color/red" />
+
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="1% higher than previous year."
+                            android:id="@+id/button2"
+                            android:background="@color/blue" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pieSeekBar"
+                            android:progressDrawable="@drawable/progress"
+                            android:thumb="@drawable/thumb_seek"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1982"
+                                android:layout_gravity="start"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2012"
+                                android:layout_gravity="right"
+                                android:textColor="@color/black"
+                                android:gravity="right"
+                                />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/seekbar_info"
+                            android:id="@+id/seekbar_info"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="650dp"
+                    android:layout_height="450dp"
+                    android:layout_rowWeight="40"
+                    android:layout_marginTop="40dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="750dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/lineChart">
+
+                </com.github.mikephil.charting.charts.LineChart>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+
+                    >
+                    <!-- To add another chart replace the type for the below one-->
+                    <com.ecru.infographic.CircleDisplay
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/overallServ"
+                        android:layout_marginTop="5dp"/>
+                    <com.ecru.infographic.CircleDisplay
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/overallInd"
+                        android:layout_marginTop="5dp"/>
+                    <com.ecru.infographic.CircleDisplay
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/overallAgri"
+                        android:layout_marginTop="5dp"/>
+                    <!-- For extra content related to the above chart put it inside below lines layout-->
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rise"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/rise"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fall"
+                        android:layout_marginTop="115dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/fall0"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fall"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/fall1"/>
+
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/risefall"/>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="450dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/exportLineChart"
+                    android:layout_marginLeft="100dp"
+                    >
+
+                </com.github.mikephil.charting.charts.LineChart>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:background="@drawable/roundborders"
+                    android:text="Click for conclusion"
+                    android:layout_marginRight="20dp"
+                    android:onClick="expandConclusionBtn"
+                    android:textAlignment="textStart"
+                    android:padding="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="@string/backBtn"
+                        android:background="@color/yellow"
+                        android:textColor="@color/black"
+                        android:id="@+id/backBtn"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:onClick="resetScroll"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Bottom section content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="1200dp"
+                    android:layout_height="match_parent"
+                    android:text=" "
+                    android:textColor="@color/black"
+
+                    />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/futureuk"
+                    android:text="@string/futureBtn"
+                    android:onClick="displayLeftSidePanel"
+                    android:textColor="@color/black"
+                    android:background="@drawable/roundborders"
+                   />
+
+                <TextView
+                    android:layout_width="970dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/emplymentLineGraphDescription"/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/gdpuk"
+                    android:text="@string/gdp"
+                    android:onClick="displayRightSidePanel"
+                    android:textColor="@color/black"
+                    android:background="@drawable/roundborders"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/londonskylinetiled"
+                    android:scaleType="fitXY"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <!-- The navigation drawer -->
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="@drawable/repeatbg"/>
+    <ListView android:id="@+id/right_drawer"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="@drawable/repeatbg"/>
+</android.support.v4.widget.DrawerLayout>
